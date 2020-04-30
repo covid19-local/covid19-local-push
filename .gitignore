@@ -113,3 +113,13 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Parameters
+
+.params
+
+# Firebase
+*firebase*.json
+
+# Build
+action.zip

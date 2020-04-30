@@ -1,12 +1,15 @@
 {
-  "name": "covid-push",
+  "name": "covid19-push",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "main.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "date-format": "^3.0.0",
+    "firebase-admin": "^8.11.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
 }
