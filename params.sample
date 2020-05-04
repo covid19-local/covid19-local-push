@@ -1,4 +1,5 @@
 {
     "GOOGLE_APPLICATION_CREDENTIALS": "<add_google_application_credentials>",
-    "COUNTRY": "<add_country>"
+    "COUNTRY": "<add_country>",
+    "DATE_OFFSET": "<add_date_offset>"
 }

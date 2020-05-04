@@ -9,6 +9,7 @@ const MAX_MESSAGE_BATCH_COUNT = 500;
 let messagingInitialized = false;
 let messagingCredentials = '';
 let sendMessagesInBatches = true;
+let dateOffset = 1;
 
 async function getRegions() {
     let url = REGIONS_BASE_API;
@@ -149,6 +150,7 @@ async function sendMessages(messages) {
 async function main(args) {
     try {
         messagingCredentials = args.GOOGLE_APPLICATION_CREDENTIALS;
+        dateOffset = parseInt(args.DATE_OFFSET);
 
         let regions = await getRegions();
         if (regions.length <= 0) {
@@ -165,7 +167,7 @@ async function main(args) {
         }
 
         let date = new Date();
-        date.setDate(date.getDate() - 1);
+        date.setDate(date.getDate() - dateOffset);
 
         let messages = [];
         for (const state of states) {
